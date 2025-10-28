@@ -1,0 +1,35 @@
+# Virtual environment
+venv/
+virenv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+.env.*
+
+# Streamlit temporary files
+.streamlit/secrets.toml
+
+# Jupyter / cache
+.ipynb_checkpoints/
+.cache/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# User data
+users.json
+*.xlsx
+*.csv
+*.xls
+data files/
+processed_books/
+
+# Logs
+*.log
