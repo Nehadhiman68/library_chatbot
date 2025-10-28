@@ -53,7 +53,7 @@ st.set_page_config(
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_PATH = os.path.join(BASE_DIR, "data file")
+DATA_PATH = os.path.join(BASE_DIR, "data")
 BOOK_FILES = ["Total books.xlsx", "Book 22.xlsx", "processed_books.xlsx"]
 
 # ------------------------
