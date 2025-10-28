@@ -52,9 +52,15 @@ st.set_page_config(
     page_icon="📖"
 )
 
+# Determine data folder (works on both local + Streamlit Cloud)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_PATH = os.path.join(BASE_DIR, "data")
+DATA_PATH = os.path.join(BASE_DIR, "../data")
+
 BOOK_FILES = ["Total books.xlsx", "Book 22.xlsx", "processed_books.xlsx"]
+
+st.write("📂 Working directory:", os.getcwd())
+st.write("📂 Data path:", DATA_PATH)
+st.write("📂 Files in data:", os.listdir(DATA_PATH) if os.path.exists(DATA_PATH) else "Data folder not found")
 
 # ------------------------
 # STYLE
