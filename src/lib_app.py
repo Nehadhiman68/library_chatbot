@@ -155,7 +155,7 @@ st.markdown('<h3 class="fade-in">Hi there! 👋 I\'m your Library Assistant. Ask
 # ------------------------
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
-        {"role": "assistant", "content": "Hi! How can I help you today?"}
+        {"role": "assistant", "content": "Hi! Here are the results"}
     ]
 
 # ------------------------
@@ -164,7 +164,7 @@ if "chat_history" not in st.session_state:
 col1, col2 = st.columns([8, 1])
 
 with col1:
-    query = st.text_input("Enter your query here")
+    query = st.text_input("Enter your book search query here...", key="text_input", placeholder="e.g., Data Science, Machine Learning, ISBN 978-3-16-148410-0")
 
 with col2:
     if st.button("🎤"):
