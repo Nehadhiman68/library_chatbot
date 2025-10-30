@@ -79,11 +79,23 @@ st.set_page_config(
 # Check if running in cloud environment
 IS_CLOUD = os.getenv('STREAMLIT_CLOUD', False)
 
-# Determine data folder (works on both local + Cloud)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_PATH = os.path.join(BASE_DIR, "../data")
+import pandas as pd
 
-BOOK_FILES = ["Total books.xlsx", "Book 22.xlsx", "processed_books.xlsx"]
+# --- Book 22 data ---
+url_book22 = "https://docs.google.com/spreadsheets/d/1dd5GSYoaBxDYHsTHQXdYY1RCsyGI2_jO-4GpNsNDFWY/export?format=csv"
+df_book22 = pd.read_csv(url_book22)
+
+# --- Total Books data ---
+url_total = "https://docs.google.com/spreadsheets/d/1MDYZm9otTEHl4VtmgTizJ95ZPjwAe5BTWiKAxvVz8ck/export?format=csv"
+df_total = pd.read_csv(url_total)
+
+# --- Processed Books data ---
+url_processed = "https://docs.google.com/spreadsheets/d/1Lo8crYh0CmoPmqNl4YEtMHArfzzQCTntiF4jaElktRY/export?format=csv"
+df_books = pd.read_csv(url_processed)
+
+# Example display (you can remove or replace this with your logic)
+st.write(df_books.head())
+
 
 # Load environment variables
 dotenv.load_dotenv()
