@@ -8,6 +8,14 @@ import time
 from fuzzywuzzy import fuzz, process
 from streamlit_option_menu import option_menu
 
+# ------------------------
+# CONFIGURATION
+# ------------------------
+st.set_page_config(
+    page_title="📚 University Library Chatbot",
+    layout="wide",
+    page_icon="📖"
+)
 
 # ------------------------
 # SIDEBAR - CRSU Library Info
@@ -64,16 +72,6 @@ h2, h3 {color:#1e3d59;}
 }
 </style>
 """, unsafe_allow_html=True)
-
-
-# ------------------------
-# CONFIGURATION
-# ------------------------
-st.set_page_config(
-    page_title="📚 University Library Chatbot",
-    layout="wide",
-    page_icon="📖"
-)
 
 # Load environment variables
 dotenv.load_dotenv()
@@ -143,10 +141,6 @@ if "chat_history" not in st.session_state:
         {"role": "assistant", "content": ""}
     ]
 
-# ------------------------
-# PAGE CONFIGURATION
-# ------------------------
-st.set_page_config(page_title="📚 Library Assistant", page_icon="🤖", layout="centered")
 
 # ------------------------
 # CHAT DISPLAY
