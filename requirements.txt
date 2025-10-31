@@ -4,5 +4,4 @@ pandas
 openpyxl
 fuzzywuzzy
 python-Levenshtein
-python 3.0.10
-dotenv
+python-dotenv
